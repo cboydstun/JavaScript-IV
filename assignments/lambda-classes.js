@@ -30,7 +30,7 @@ class Instructor extends Person {
         min = -20;
         return student.grade - Math.random() * (max-min) + max
     }
-}
+};
 
 class Student extends Person {
     constructor (studentAttributes) {
@@ -56,7 +56,7 @@ class Student extends Person {
             return `Don't stop grinding!`
         }
 }
-}
+};
 
 class ProjectManager extends Instructor {
     constructor(pmAttributes) {
@@ -80,7 +80,7 @@ let chris = new Student ({
     'previousBackground': 'Education',
     'className': 'WEB23',
     'favSubjects': ['HTML', 'CSS', 'JavaScript', 'Python']
-})
+});
 
 let john = new Student ({
     'name': 'John Smith',
@@ -90,7 +90,7 @@ let john = new Student ({
     'previousBackground': 'Target',
     'className': 'WEB21',
     'favSubjects': ['PHP', 'SQL', 'jQuery']
-})
+});
 
 let jack = new Student ({
     'name': 'Jack Longoria',
@@ -100,7 +100,7 @@ let jack = new Student ({
     'previousBackground': 'Unknown',
     'className': 'WEB24',
     'favSubjects': ['CSS', 'CSS', 'CSS']
-})
+});
 
 let susan = new Instructor ({
     'name': 'Susan Sweet',
@@ -110,7 +110,7 @@ let susan = new Instructor ({
     'specialty': 'Web Design',
     'favLanguage': 'CSS',
     'catchphrase': 'It. Is. On.'
-})
+});
 
 let jason = new Instructor ({
     'name': `Jason Vorheese`,
@@ -120,7 +120,7 @@ let jason = new Instructor ({
     'specialty': 'Violent cinematography',
     'favLanguage': 'MySQL',
     'catchphrase': `QUIET.`
-})
+});
 
 let jared = new Instructor ({
     'name': `Jared Leto`,
@@ -130,7 +130,7 @@ let jared = new Instructor ({
     'specialty': 'Keyboarding',
     'favLanguage': 'Javascript',
     'catchphrase': `Awesome!`
-})
+});
 
 let tom = new ProjectManager ({
     'name': 'Tom Cruise',
@@ -142,7 +142,7 @@ let tom = new ProjectManager ({
     'catchPhrase': 'We are almost there.',
     'gradClassName': 'WEB23',
     'favInstructor': 'Jared Leto',
-})
+});
 
 let baron = new ProjectManager ({
     'name': 'Baron Greene',
@@ -171,6 +171,6 @@ let tandy = new ProjectManager ({
 console.log(tandy.age);
 console.log(tandy.favInstructor);
 console.log(tandy.specialty);
-console.log(tandy.standUp('CS10-help'));
+console.log(tandy.standUp('WEB23-help'));
 console.log(tandy.debugsCode(chris, 'CSS'));
 console.log(chris.speak());
