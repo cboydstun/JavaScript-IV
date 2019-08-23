@@ -8,7 +8,7 @@ class Person {
         this.gender = options.gender;
     }
     speak() {
-        return `Hello my name is ${this.name}, I am from ${this.location}`
+        return `Hello, my name is ${this.name}. I am from ${this.location}.`;
     }
 };
 
@@ -20,10 +20,10 @@ class Instructor extends Person {
         this.catchPhrase = instructorOptions.catchPhrase;
     }
     demo (subject) {
-        return `Today we are learning about ${subject}`
+        return `Today we are learning about ${subject}.`;
     }
     grade (student, subject) {
-        return `${student.name} receives a perfect score on ${subject}`;
+        return `${student.name} receives a perfect score on ${subject}.`;
     }
     grading (student, max, min) { // This is the code I wrote for the stretch task that randomly adds/subtracts points
         max = 20;
@@ -44,16 +44,16 @@ class Student extends Person {
         return this.favSubjects;
     }
     PRAssignment(subject) {
-        return `${this.name} has submitted a PR for ${subject}`
+        return `${this.name} has submitted a PR for ${subject}.`
     }
     sprintChallenge(subject) {
-        return `${this.name} has begun sprint challenge on ${subject}`
+        return `${this.name} has begun sprint challenge on ${subject}.`
     }
     graduation () { // This is the code I wrote for the stretch task that graduates students.
         if (this.grade > 70 ) {
-            return 'Congratulations on graduating from Lambda!  Good luck finding employment!  Refer to us often!'
+            return 'Congratulations on graduating from Lambda!'
         } else {
-            return `I guess it's more pull requests for you!`
+            return `Don't stop grinding!`
         }
 }
 }
@@ -65,10 +65,10 @@ class ProjectManager extends Instructor {
     this.favInstructor = pmAttributes.favInstructor;
     }
     standUp (channel) {
-        return `${this.name} announces to ${channel}, @channel standy times!`
+        return `${this.name} announces ${channel}!`
     }
     debugsCode(student, subject) {
-        return `${this.name} debugs ${student.name}'s code on ${subject}`
+        return `${this.name} debugs ${student.name}'s code on ${subject}.`
     }
 };
 
@@ -167,3 +167,10 @@ let tandy = new ProjectManager ({
     'gradClassName': 'Web19',
     'favInstructor': 'Jennifer James',
 });
+
+console.log(tandy.age);
+console.log(tandy.favInstructor);
+console.log(tandy.specialty);
+console.log(tandy.standUp('CS10-help'));
+console.log(tandy.debugsCode(chris, 'CSS'));
+console.log(chris.speak());
