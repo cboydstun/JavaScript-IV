@@ -25,7 +25,7 @@ class Instructor extends Person {
     grade (student, subject) {
         return `${student.name} receives a perfect score on ${subject}.`;
     }
-    grading (student, max, min) { // This is the code I wrote for the stretch task that randomly adds/subtracts points
+    grading (student, max, min) { // Stretch - makes random starting points
         max = 20;
         min = -20;
         return student.grade - Math.random() * (max-min) + max
@@ -38,7 +38,7 @@ class Student extends Person {
     this.previousBackground = studentAttributes.previousBackground;
     this.className = studentAttributes.className;
     this.favSubjects = studentAttributes.favSubjects;
-    this.grade = Math.floor(Math.random() * 100) + 1 // This is the code I wrote for the stretch task that randomly assigned grades to students.
+    this.grade = Math.floor(Math.random() * 100) + 1 // Randomly assigns grades to students
     }
     listsSubjects () {
         return this.favSubjects;
@@ -49,7 +49,7 @@ class Student extends Person {
     sprintChallenge(subject) {
         return `${this.name} has begun sprint challenge on ${subject}.`
     }
-    graduation () { // This is the code I wrote for the stretch task that graduates students.
+    graduation () { // Graduates students or sends them back
         if (this.grade > 70 ) {
             return 'Congratulations on graduating from Lambda!'
         } else {
@@ -174,3 +174,12 @@ console.log(tandy.specialty);
 console.log(tandy.standUp('WEB23-help'));
 console.log(tandy.debugsCode(chris, 'CSS'));
 console.log(chris.speak());
+console.log(john.listsSubjects());
+console.log(jack.PRAssignment('JavaScript-III'));
+console.log(john.sprintChallenge('coding'));
+console.log(susan.demo('node.js'));
+console.log(jason.grade(chris, 'Javascript-IV'));
+console.log(tom.standUp('WEB23'));
+console.log(chris.grade);
+console.log(jared.grading(chris));
+console.log(chris.graduation());
